@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "推箱子",
+  "usingComponents": {
+    "audioCtrl": "/components/audioCtrl/audioCtrl",
+    "recharge": "/components/recharge/recharge"
+  }
+}

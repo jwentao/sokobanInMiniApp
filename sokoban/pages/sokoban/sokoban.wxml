@@ -1,0 +1,80 @@
+<view class="page">
+    <audioCtrl id="audioCtrl"></audioCtrl>
+    <recharge id="recharge"></recharge>
+    <view class="diamonds-bar" bindtap="openRechargeBar">
+        <text><text class="iconfont icon-zuanshi"></text>{{diamondsCount}}<text class="iconfont icon-jiajianzujianjiahao"></text></text>
+    </view>
+    <view class="show-ctrl-btn" catchtap="showCtrl">
+        <text class="iconfont icon-iconfonticonfontjixieqimo"></text>
+    </view>
+    <view class="title">
+        <view class="round title-item">round{{round+1}}</view>
+        <view class="step-count title-item">已花步数:{{showAutoWinBar?autoWinStepArr.length - 1:stepArrLength}}</view>
+        <view class="title-item">最优:{{bestStepLength}}</view>
+    </view>
+    <!--工具bar-->
+    <view class="top" hidden="{{showAutoWinBar}}">
+        <view class="auto-win top-item" bindtap="clickOpenAutoWin">查看解</view>
+        <view class="iconfont icon-shangyishoushangyige top-item" bindtap="backStep"></view>
+    </view>
+    <view class="top" hidden="{{!showAutoWinBar}}">
+        <view class="top-item">
+            <text class="iconfont icon-shangyishou" bindtap="autoPre"></text>
+        </view>
+        <view class="top-item">
+            <text class="iconfont {{isAutoWinFinish?'icon-fanhui':isAutoWinPause?'icon-bofang':'icon-zanting'}}" bindtap="autoWin"></text>
+        </view>
+        <view class="top-item">
+            <text class="iconfont icon-xiayishou" bindtap="autoNext"></text>
+        </view>
+        <view class="close iconfont icon-guanbi" bindtap="closeAutoWin">
+        </view>
+    </view>
+    <!--过关后显示的-->
+    <view class="pass-bar" wx:if="{{showNextRound}}">
+        <view class="pass-content">
+            <view class="pass-text">闯关成功</view>
+            <view class="score-bar">
+                <view class="this-score score-item">
+                    <view>本局成绩</view>
+                    <view>{{stepArrLength}}/{{bestStepLength}}</view>
+                </view>
+                <view class="star-bar score-item">
+                    <view class="star-item">
+                        <text class="iconfont {{star>=1?'icon-xingxing':'icon-star'}}"></text>
+                    </view>
+                    <view class="star-item">
+                        <text class="iconfont {{star>=2?'icon-xingxing':'icon-star'}}"></text>
+                    </view>
+                    <view class="star-item">
+                        <text class="iconfont {{star>=3?'icon-xingxing':'icon-star'}}"></text>
+                    </view>
+                </view>
+                <view class="best-score score-item">
+                    <view>历史最佳</view>
+                    <view>{{historyBestStep}}/{{bestStepLength}}</view>
+                </view>
+            </view>
+            <view class="tool-bar">
+                <!--<view class="back tool-item" bindtap="backHome">-->
+                    <!--<view class="iconfont icon-home"></view>-->
+                    <!--<view class="tool-text">首页</view>-->
+                <!--</view>-->
+                <view class="again tool-item" bindtap="reStart">
+                    <view class="iconfont icon-fanhui"></view>
+                    <view class="tool-text">重玩</view>
+                </view>
+                <view class="next-round tool-item" bindtap="nextRound">
+                    <view class="iconfont icon-xiayishou"></view>
+                    <view class="tool-text">下一关</view>
+                </view>
+            </view>
+            <view class="share-bar">
+                <button open-type="share" class="share" bindtap="share">分享战绩</button>
+            </view>
+        </view>
+    </view>
+    <!--画布-->
+    <canvas hidden="{{showNextRound || showRechargeBar || showAudioCtrl}}" class="canvas canvas1" canvas-id="canvas" disable-scroll="true"></canvas>
+    <canvas hidden="{{showNextRound || showRechargeBar || showAudioCtrl}}" class="canvas canvas2" canvas-id="canvas2" disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" bindtap="tap"></canvas>
+</view>

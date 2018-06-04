@@ -1,0 +1,24 @@
+<view class="recharge-bar" wx:if="{{isShowRechargeBar}}">
+    <view class="recharge-content">
+        <view class="close-icon" catchtap="_closeRecharge">
+            <text class="iconfont icon-2guanbi"></text>
+        </view>
+        <view class="recharge-content-inner">
+            <view class="recharge-item" wx:for="{{rechargeBase}}" wx:for-index="index" wx:for-item="item" data-index="{{index}}" catchtap="_selRecharge">
+                <view class="recharge-item-inner {{rechargeSelIdx===index?'recharge-item-active':''}}">
+                    <view class="recharge-dia">
+                        <text class="iconfont icon-zuanshi"></text>x{{item.diamonds}}
+                    </view>
+                    <view class="recharge-cost">
+                        {{item.cost}}元
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="confirm-bar">
+            <view class="confirm-btn" catchtap="_confirmRecharge">
+                确认充值
+            </view>
+        </view>
+    </view>
+</view>

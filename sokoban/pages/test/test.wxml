@@ -1,0 +1,21 @@
+<view class="index">
+    <view class="round-bar">
+        <view class="round-item" wx:for="{{roundArr}}" wx:for-index="index">
+            <view class="round-box" data-round="{{index}}" bindtap="toRound">
+                第{{index + 1}}关
+                <view class="iconfont icon-suo lock" wx:if="{{index>curRound}}"></view>
+                <view class="star-bar">
+                    <view class="star-item">
+                        <text class="iconfont icon-star"></text>
+                    </view>
+                    <view class="star-item">
+                        <text class="iconfont icon-star"></text>
+                    </view>
+                    <view class="star-item">
+                        <text class="iconfont icon-star"></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,52 @@
+@import "/app.wxss";
+.mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mask .audio-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 600rpx;
+    height: 600rpx;
+    background-color: white;
+    z-index: 99;
+    border-radius: 20rpx;
+}
+.audio-content .close-ctrl {
+    position: absolute;
+    top: 10rpx;
+    right: 10rpx;
+    font-size: 0;
+}
+.close-ctrl .iconfont {
+    font-size: 40rpx;
+}
+.audio-content .audio-title {
+    text-align: center;
+    height: 150rpx;
+    line-height: 150rpx;
+    background-color: #dcdcdc;
+    border-radius: 20rpx 20rpx 0 0;
+}
+.ctrl-bar .ctrl-item {
+    display: flex;
+    height: 130rpx;
+    line-height: 130rpx;
+    font-size: 0;
+}
+.ctrl-item .item-option,.ctrl-item .item-ctrl {
+    flex: 1;
+    text-align: center;
+    font-size: 40rpx;
+}
+.ctrl-item .item-ctrl text {
+    font-size: 60rpx;
+}

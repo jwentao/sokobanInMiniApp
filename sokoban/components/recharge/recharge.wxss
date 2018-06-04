@@ -1,0 +1,69 @@
+@import "/app.wxss";
+.recharge-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.recharge-bar .recharge-content {
+    position: absolute;
+    top: 200rpx;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 650rpx;
+    width: 600rpx;
+    border: 1rpx solid white;
+    border-radius: 20rpx;
+    background-color: white;
+}
+.recharge-content .close-icon {
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+    font-size: 0;
+}
+.close-icon .iconfont {
+    font-size: 40rpx;
+}
+.recharge-content .recharge-content-inner {
+    margin: 20rpx;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+.recharge-content .recharge-item {
+    flex: 1 1 50%;
+    height: 200rpx;
+    margin-top: 20rpx;
+    text-align: center;
+}
+.recharge-item .recharge-item-inner {
+    border: 2rpx white solid;
+    border-radius: 20rpx;
+    margin: 0 40rpx;
+}
+.recharge-content .recharge-item-active {
+    border-color: green;
+}
+.recharge-item .recharge-dia {
+    height: 150rpx;
+    line-height: 150rpx;
+}
+.recharge-dia .iconfont{
+    font-size: 100rpx;
+    color: indigo;
+}
+.recharge-content .confirm-bar {
+    margin: 40rpx 20rpx 0;
+}
+.confirm-bar .confirm-btn {
+    background-color: green;
+    color: white;
+    border-radius: 20rpx;
+    text-align: center;
+    height: 110rpx;
+    line-height: 110rpx;
+}

@@ -1,0 +1,36 @@
+<view class="index">
+    <audioCtrl id="audioCtrl"></audioCtrl>
+    <recharge id="recharge"></recharge>
+    <view class="title">
+        <view class="title-name">经典推箱子</view>
+        <view class="star-count">
+            <text class="iconfont icon-zuanshi" catchtap="openRechargeBar"></text>{{diamondsCount}}
+            <text class="iconfont icon-xingxing"></text>{{starCount}}/{{roundArr.length * 3}}
+        </view>
+        <!--音效控制台-->
+        <view class="show-ctrl-btn" catchtap="showCtrl">
+            <text class="iconfont icon-iconfonticonfontjixieqimo"></text>
+        </view>
+    </view>
+    <scroll-view scroll-y="true" class="scroll-bar">
+        <view class="round-bar">
+            <view class="round-item" wx:for="{{roundArr}}" wx:for-index="index" wx:key="index">
+                <view class="round-box" data-round="{{index}}" catchtap="toRound">
+                    第{{index + 1}}关
+                    <view class="iconfont icon-suo lock" wx:if="{{!roundInfo[index]}}"></view>
+                    <view class="star-bar">
+                        <view class="star-item">
+                            <text class="iconfont {{roundInfo[index].star>=1?'icon-xingxing':'icon-star'}}"></text>
+                        </view>
+                        <view class="star-item">
+                            <text class="iconfont {{roundInfo[index].star>=2?'icon-xingxing':'icon-star'}}"></text>
+                        </view>
+                        <view class="star-item">
+                            <text class="iconfont {{roundInfo[index].star>=3?'icon-xingxing':'icon-star'}}"></text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

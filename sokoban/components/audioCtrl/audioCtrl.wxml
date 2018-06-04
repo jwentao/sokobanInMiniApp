@@ -1,0 +1,16 @@
+<view class="audio-ctrl-container" hidden="{{!isShowAudioCtrl}}">
+    <view class="mask" catchtap="_stop">
+        <view class="audio-content">
+            <view class="close-ctrl" catchtap="_closeCtrl"><text class="iconfont icon-2guanbi"></text></view>
+            <view class="audio-title">声音控制</view>
+            <view class="ctrl-bar">
+                <view class="ctrl-item" wx:for="{{option}}" wx:for-item="item" wx:for-index="index">
+                    <view class="item-option">{{item.name}}</view>
+                    <view class="item-ctrl">
+                        <text class="iconfont {{item.isPlay?'icon-xuanxiangkuangqueding':'icon-xuanxiangkuang'}}" data-key="{{index}}" catchtap="_autioCtrl"></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

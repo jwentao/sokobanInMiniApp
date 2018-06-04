@@ -1,0 +1,241 @@
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.diamonds-bar {
+    position: absolute;
+    font-size: 0;
+    top: 10rpx;
+    left: 10rpx;
+}
+.diamonds-bar text{
+    font-size: 35rpx;
+}
+.diamonds-bar .icon-zuanshi {
+    color: indigo;
+}
+.show-ctrl-btn {
+    position: absolute;
+    font-size: 0;
+    top: 20rpx;
+    right: 20rpx;
+}
+.show-ctrl-btn .iconfont {
+    font-size: 35rpx;
+}
+.title {
+    margin-top: 50rpx;
+    display: flex;
+    text-align: center;
+}
+.title-item {
+    flex: 1;
+}
+.explain {
+    font-size: 24rpx;
+}
+.top {
+    position: relative;
+    border-radius: 10rpx;
+    margin: 20rpx 50rpx 0 50rpx;
+    height: 100rpx;
+    display: flex;
+    background-color: white;
+}
+.top .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 30rpx!important;
+}
+.top .top-item {
+    text-align: center;
+    flex: 1;
+    line-height: 100rpx;
+    font-size: 30rpx;
+}
+.top .iconfont {
+    font-size: 50rpx;
+}
+/*过关后*/
+.pass-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.pass-bar .pass-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 250rpx;
+    margin: auto;
+    height: 600rpx;
+    width: 600rpx;
+    border: 1rpx solid white;
+    border-radius: 20rpx;
+    background-color: white;
+}
+.pass-content .pass-text {
+    height: 150rpx;
+    line-height: 150rpx;
+    text-align: center;
+    background-color: #dcdcdc;
+    border-radius: 20rpx 20rpx 0 0;
+}
+.pass-content .score-bar {
+    display: flex;
+    margin-top: 50rpx;
+}
+.score-bar .this-score, .score-bar .best-score {
+    width: 180rpx;
+    flex: 0 0 180rpx;
+    font-size: 30rpx;
+    text-align: center;
+}
+.score-bar .star-bar {
+    flex: 1;
+    display: flex;
+}
+.score-bar .star-item {
+    flex: 1;
+    text-align: center;
+}
+.star-item .icon-star, .star-item .icon-xingxing {
+    font-size: 50rpx;
+}
+.star-item .icon-xingxing {
+    color: gold;
+}
+.pass-content .tool-bar {
+    display: flex;
+    margin-top: 25rpx;
+    padding-top: 25rpx;
+    border-top: 1rpx #dadada solid;
+    margin-bottom: 25rpx;
+    padding-bottom: 25rpx;
+    border-bottom: 1rpx #dadada solid;
+}
+.tool-bar .tool-item {
+    flex: 1;
+    text-align: center;
+}
+.tool-item .iconfont {
+    font-size: 55rpx;
+}
+.tool-item .tool-text {
+    font-size: 30rpx;
+}
+.pass-content .share-bar {
+    position: relative;
+}
+.share-bar .share {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    color: white;
+    background-color: #9fb87e;
+    border-radius: 10rpx;
+}
+/*充值部分*/
+.recharge-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.recharge-bar .recharge-content {
+    position: absolute;
+    top: 200rpx;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 650rpx;
+    width: 600rpx;
+    border: 1rpx solid white;
+    border-radius: 20rpx;
+    background-color: white;
+}
+.recharge-content .close-icon {
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+    font-size: 0;
+}
+.close-icon .iconfont {
+    font-size: 40rpx;
+}
+.recharge-content .recharge-content-inner {
+    margin: 20rpx;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+.recharge-content .recharge-item {
+    flex: 1 1 50%;
+    height: 200rpx;
+    margin-top: 20rpx;
+    text-align: center;
+}
+.recharge-item .recharge-item-inner {
+    border: 2rpx white solid;
+    border-radius: 20rpx;
+    margin: 0 40rpx;
+}
+.recharge-content .recharge-item-active {
+    border-color: green;
+}
+.recharge-item .recharge-dia {
+    height: 150rpx;
+    line-height: 150rpx;
+}
+.recharge-dia .iconfont{
+    font-size: 100rpx;
+    color: indigo;
+}
+.recharge-content .confirm-bar {
+    margin: 40rpx 20rpx 0;
+}
+.confirm-bar .confirm-btn {
+    background-color: green;
+    color: white;
+    border-radius: 20rpx;
+    text-align: center;
+    height: 110rpx;
+    line-height: 110rpx;
+}
+/*画布*/
+.canvas {
+    position: absolute;
+    top: 220rpx;
+    height: 750rpx;
+    width: 100%;
+}
+.canvas1 {
+    z-index: 1;
+}
+.canvas2 {
+    z-index: 2;
+}
+.bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 50rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    display: flex;
+}
+.bottom .bottom-item {
+    text-align: center;
+    flex: 1;
+}

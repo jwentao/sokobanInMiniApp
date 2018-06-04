@@ -1,0 +1,76 @@
+.title {
+    height: 200rpx;
+}
+.title .title-name {
+    line-height: 200rpx;
+    text-align: center;
+    font-size: 50rpx;
+    font-weight: 800;
+}
+.title .star-count {
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+}
+.title .icon-xingxing {
+    color: gold;
+}
+.title .icon-zuanshi {
+    color: indigo;
+}
+.title .show-ctrl-btn {
+    position: absolute;
+    font-size: 0;
+    top: 20rpx;
+    right: 20rpx;
+}
+.show-ctrl-btn .iconfont {
+    font-size: 35rpx;
+}
+.scroll-bar {
+    position: absolute;
+    top: 200rpx;
+    bottom: 0;
+}
+.round-bar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.round-item {
+    flex: 0 0 33%;
+    height: 250rpx;
+    position: relative;
+}
+.round-box {
+    width: 150rpx;
+    height: 150rpx;
+    line-height: 150rpx;
+    text-align: center;
+    border: 2rpx navajowhite solid;
+    border-radius: 10rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.lock {
+    position: absolute;
+    top: -50%;
+    left: -25%;
+    font-size: 70rpx;
+}
+.star-bar {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 50rpx;
+    height: 50rpx;
+}
+.star-item {
+    flex: 1;
+}
+.star-item .icon-xingxing {
+    color: gold;
+}

@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/sokoban/sokoban"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor": "#194894",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
